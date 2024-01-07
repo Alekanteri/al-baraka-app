@@ -1,77 +1,105 @@
 import React, { useState } from "react";
 import css from "./Calculator.module.scss";
+import "../../styles/global.scss";
 
 const Calculator = () => {
-    const [count, setCount] = useState(8000);
-    const [multi, setMulti] = useState(2);
-    const [result, setResult] = useState(0);
+  const [count, setCount] = useState(8000);
+  const [month, setMonth] = useState(2);
+  const [firstPayment, setFistPayment] = useState(0);
+  const [monthPayment, setMonthPayment] = useState(0);
+  const [murkUp, setMurkUp] = useState(0);
+  const [result, setResult] = useState(0);
+  const [discount, setDiscount] = useState(true);
 
-    const counterAddition = (e) => {
-        setCount(e.target.value * 1000);
-    };
+  const firstPaymentCalculation = async () => {
+    const firstPaymentcalc = (count / 100) * 30;
+    setFistPayment(firstPaymentcalc);
+  };
 
-    const multiPayment = (e) => {
-        setMulti(e.target.value);
-    };
+  const resultCalculation = async () => {
+    const resultCalc = count + (count / 100) * (discount ? 2 : 3 * month);
+    setResult(resultCalc);
+  };
 
-    const resultCalc = () => {
-        setResult(monthPayment() + firstPayment() + markUp());
-    };
+  const monthPaymentCalculation = async () => {
+    const monthPaymentcalc = (result - firstPayment) / 2;
+    setMonthPayment(monthPaymentcalc);
+  };
 
-    const monthPayment = () => {
-        return Math.floor((count / 100) * 9);
-    };
+  const murkUpCalculation = async () => {
+    const murkUpcalc = result - count;
+    setMurkUp(murkUpcalc);
+  };
 
-    const firstPayment = () => {
-        return Math.floor((count / 100) * 30);
-    };
+  const func = async () => {
+    await resultCalculation();
+    await firstPaymentCalculation();
+    await monthPaymentCalculation();
+    await murkUpCalculation();
+  };
 
-
-    const markUp = () => {
-        const mp = monthPayment();
-        const fp = firstPayment();
-        return Math.floor(mp + fp);
-    };
-
-    const [checked, setChecked] = useState(false);
-
-    const handleChecked = (e) => {
-        setChecked(e.target.checked);
-    };
-
-    return (
-        <>
-            <div className={css.calculatorBody}>
-                <form onChange={resultCalc}>
-                    <div className={css.swithcer}>
-                        <p style={{color: checked ? "" : "#16a34a"}}>Идеал</p>
-                        <label className={css.switch} onClick={handleChecked}>
-                            <input type="checkbox"/>
-                            <span className={`${css.slider} round`}></span>
-                        </label>
-                        <p style={{color: !checked ? "" : "#16a34a"}}>Стандарт</p>
-                    </div>
-                    <label>Стоимость товара: {count}</label>
-                    <input type="range" min={8} max={200} onChange={counterAddition}/>
-                    <br/>
-                    <label>Срок рассрочки: {multi}</label>
-                    <input type="range" min={2} max={12} onChange={multiPayment}/>
-                </form>
-                <div className={css.calculatorResult}>
-                    <div>
-                        Общая стоимость
-                        <p>{result}</p>
-                    </div>
-                    <p>Ежемесячный платеж</p>
-                    <p>{monthPayment()}</p>
-                    <p>Первый платеж</p>
-                    <p>{firstPayment()}</p>
-                    <p>Торговая наценка</p>
-                    <p>{markUp()}</p>
-                </div>
+  return (
+    <>
+      <div className={css.calculationContainer}>
+        <h1 className={css.title}>Рассчитайте свою персональную рассрочку</h1>
+        <div className={css.calculatorBody}>
+          <form onChange={func}>
+            <div className={css.discountBody}>
+              <div
+                className={`${css.discountBtn} ${
+                  discount ? css.activeBtn : ""
+                }`}
+                onClick={() => {
+                  setDiscount(true);
+                }}
+              >
+                Идеал
+              </div>
+              <div
+                className={`${css.discountBtn} ${
+                  !discount ? css.activeBtn : ""
+                }`}
+                onClick={() => {
+                  setDiscount(false);
+                }}
+              >
+                Стандарт
+              </div>
             </div>
-        </>
-    );
+            <label>Стоимость товара: {count}</label>
+            <input
+              type="range"
+              min={8}
+              max={200}
+              defaultValue={8}
+              onChange={(e) => setCount(e.target.value * 1000)}
+            />
+            <br />
+            <label>Срок рассрочки: {month}</label>
+            <input
+              type="range"
+              min={2}
+              max={12}
+              defaultValue={2}
+              onChange={(e) => setMonth(e.target.value)}
+            />
+          </form>
+          <div className={css.calculatorResult}>
+            <div>
+              Общая стоимость
+              <p>{result}</p>
+            </div>
+            <p>Ежемесячный платеж</p>
+            <p>{monthPayment}</p>
+            <p>Первый платеж</p>
+            <p>{firstPayment}</p>
+            <p>Торговая наценка</p>
+            <p>{murkUp}</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Calculator;
