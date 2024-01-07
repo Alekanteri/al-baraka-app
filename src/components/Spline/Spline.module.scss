@@ -1,11 +1,13 @@
 .spline {
   .container {
-    padding: 32px 62px;
-    display: flex;
-    justify-content: space-between;
-    .splienLeft {
+    margin: 64px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 
+    @media (max-height: 768px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      place-items: center;
     }
   }
-
 }

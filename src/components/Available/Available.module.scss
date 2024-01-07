@@ -1,30 +1,42 @@
-@import '../../styles/contants.scss';
+@import "../../styles/contants.scss";
 
-.wrapper{
-  background: white;
+.wrapper {
+  background: $bg-main-color;
+
+  @include darkMode {
+    background: $dark-bg-main-color;
+  }
   overflow: hidden;
-  .container{
+  .container {
     flex-direction: column;
     gap: 2rem;
-    .heading{
+    .heading {
       width: 100%;
-      justify-content: space-between;
       align-items: flex-end;
       flex-wrap: wrap;
-      >:nth-child(2)
-      {
+      > :nth-child(2) {
         text-decoration: underline;
         color: orange;
         cursor: pointer;
       }
     }
 
-    .showCase{
+    .showCase {
       width: 100%;
-      gap: 1.5rem;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      >img{
+      display: grid;
+      place-items: center;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: 990px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+
+      > img {
         border-radius: 20px;
         max-width: 25rem;
         max-height: 18rem;
@@ -54,33 +66,36 @@
   }
 
   .howContent {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 
-    .howLeft {
+    .howItem {
+      position: relative;
+      border-radius: 1rem;
+      padding: 1rem;
+      background: $main-block-bg-color;
+      box-shadow: 0 0 20px $bg-main-color;
+      overflow: hidden;
+      height: 8rem;
       display: flex;
-      background-image: url("https://www.al-baraka.ru/assets/img/2.svg");
-      span {
-        z-index: 1;
-      }
-      .howItem {
-        height: 108px;
-      }
-    }
-      .howItem {
-        background: linear-gradient(to right, #127551 0%, #127551 71%, #2B8D58 100%);
-        margin: 10px;
-        padding: 30px;
-        font-size: 1rem;
-        width: 500px;
-        text-align: center;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: white;
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-    }
+      align-items: center;
+      justify-content: center;
 
+      img {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        height: 100px;
+        bottom: 0px;
+        right: -20px;
+      }
+
+      @include darkMode {
+        box-shadow: 0 0 20px $dark-bg-secondary-color;
+      }
+    }
   }
 }
