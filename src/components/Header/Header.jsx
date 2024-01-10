@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import svgLogo from "../../assets/logo-svg.svg";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 const Header = () => {
   const menuRef = useRef(null);
@@ -42,6 +43,9 @@ const Header = () => {
             <li className={`flexCenter ${css.phone}`}>
               <a href="tel:+7 (938) 007-37-77">+7 (938) 007-37-77</a>
               <BiPhoneCall size={"40px"} />
+            </li>
+            <li>
+              <ThemeSwitch />
             </li>
           </ul>
         )}

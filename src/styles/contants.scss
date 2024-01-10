@@ -8,6 +8,8 @@ $telegram-border-color: #0088cc;
 
 $text-primary: #0d2f3f;
 $text-secondary: #286f6c;
+$bg-main-color: #ffffff;
+$bg-secondary-color: #f8f7f1;
 
 $border-color: #e7e7e7;
 $main-block-bg-color: linear-gradient(
@@ -17,24 +19,9 @@ $main-block-bg-color: linear-gradient(
   #2b8d58 100%
 );
 
-$bg-main-color: #ffffff;
-$bg-secondary-color: #f8f7f1;
-
 //!_______dark mode_________!//
 
 $dark-text-primary: #dddddd;
-
 $dark-border-color: #202020;
-
 $dark-bg-main-color: #282828;
 $dark-bg-secondary-color: #1d1d1d;
-
-$darkMode: true;
-
-@mixin darkMode {
-  @if ($darkMode) {
-    @media (prefers-color-scheme: dark) {
-      @content;
-    }
-  }
-}

@@ -1,11 +1,7 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  background: $bg-main-color;
-
-  @include darkMode {
-    background: $dark-bg-main-color;
-  }
+  background: var(--bg-color);
 
   overflow: hidden;
   .container {

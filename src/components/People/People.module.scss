@@ -30,9 +30,7 @@
         }
 
         .slick-dots li button:before {
-          @include darkMode {
-            color: $bg-main-color;
-          }
+            color: var(--bg-color);
         }
       }
 
@@ -42,11 +40,7 @@
         display: flex !important;
         flex-direction: column;
         gap: 1rem;
-        background: $bg-main-color;
-
-        @include darkMode {
-          background: $dark-bg-main-color;
-        }
+        background: var(--bg-color);
         border-radius: 20px;
         position: relative;
         img {
