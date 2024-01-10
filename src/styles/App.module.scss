@@ -2,5 +2,9 @@
 .container {
   overflow-x: clip;
   position: relative;
-  color: var(--text-primary);
+  color: $text-primary;
+
+  @include darkMode {
+    color: $dark-text-primary;
+  }
 }

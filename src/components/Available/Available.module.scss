@@ -1,8 +1,11 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  background: var(--bg-color);
+  background: $bg-main-color;
 
+  @include darkMode {
+    background: $dark-bg-main-color;
+  }
   overflow: hidden;
   .container {
     flex-direction: column;
@@ -73,7 +76,7 @@
       border-radius: 1rem;
       padding: 1rem;
       background: $main-block-bg-color;
-      box-shadow: 0 0 20px var(--bg-secondary-color);
+      box-shadow: 0 0 20px $bg-main-color;
       overflow: hidden;
       height: 8rem;
       display: flex;
@@ -88,6 +91,10 @@
         height: 100px;
         bottom: 0px;
         right: -20px;
+      }
+
+      @include darkMode {
+        box-shadow: 0 0 20px $dark-bg-secondary-color;
       }
     }
   }
