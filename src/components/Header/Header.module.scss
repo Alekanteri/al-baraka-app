@@ -20,7 +20,6 @@
       animation: mymove 5s infinite;
       display: flex;
       align-items: center;
-      background: var(--bg-color);
       //background: #2B8D58;
       //padding: 4px 20px;
       //border-radius: 10px;
@@ -38,8 +37,11 @@
         height: calc(60vh - 6.3rem);
         width: 50%;
         min-width: 15rem;
-        background: var(--bg-color);
+        background: $bg-main-color;
 
+        @include darkMode {
+          background: $dark-bg-main-color;
+        }
         display: flex;
         border-radius: 10px;
         transition: all 200ms ease;
@@ -62,7 +64,7 @@
         }
 
         &:hover {
-          color: var(--text-secondary);
+          color: $text-secondary;
         }
       }
 
@@ -71,7 +73,7 @@
         flex-wrap: wrap;
 
         svg {
-          color: var(--text-secondary);
+          color: $text-secondary;
           background-color: white;
           padding: 10px;
           border-radius: 999px;

@@ -1,12 +1,5 @@
 @import "./contants.scss";
 
-:root {
-  --bg-color: $bg-main-color;
-  --bg-secondary-color: $bg-secondary-color;
-  --text-primary: $text-primary;
-  --text-secondary: $text-secondary;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +9,11 @@
 }
 
 .bg-primary {
-  background: var(--bg-color);
+  background: $bg-secondary-color;
+
+  @include darkMode {
+    background: $dark-bg-secondary-color;
+  }
 }
 
 .innerWidth {

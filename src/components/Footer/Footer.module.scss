@@ -1,7 +1,11 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  background: var(--bg-color);
+  background: $bg-main-color;
+
+  @include darkMode {
+    background: $dark-bg-main-color;
+  }
 
   .container {
     gap: 2rem;
@@ -50,7 +54,7 @@
         li {
           cursor: pointer;
           &:hover {
-            color: var(--text-secondary);
+            color: $text-secondary;
           }
         }
       }
