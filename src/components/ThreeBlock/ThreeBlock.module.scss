@@ -1,4 +1,5 @@
 @use "../../styles/contants.scss" as var;
+
 .threeBlockContainer {
   max-width: 1280px;
   margin: 5rem auto;
@@ -6,22 +7,83 @@
   place-items: center;
   gap: 3rem;
 
-  h1 {
+  & {
     font-size: 35px;
     text-align: center;
+
+    > h1 {
+      font-size: 3rem;
+      font-weight: bold;
+
+      @media (max-width: 632px) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: 588px) {
+        font-size: 2.3rem;
+      }
+
+      @media (max-width: 549px) {
+        font-size: 2.2rem;
+      }
+
+      @media (max-width: 531px) {
+        font-size: 2.1rem;
+      }
+
+      @media (max-width: 503px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 484px) {
+        font-size: 1.9rem;
+      }
+
+      @media (max-width: 461px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 444px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 441px) {
+        font-size: 1.7rem;
+      }
+
+      @media (max-width: 423px) {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 399px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 388px) {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   .threeBlockItemsList {
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 
+
     .ThreeBlockItem {
       width: 100%;
-      padding: 1rem;
+      height: 15rem;
+      padding: 2rem;
+      color: white;
       border-radius: 1rem;
-      background: var.$main-block-bg-color;
+      background: linear-gradient(
+        to right,
+        #127551 0%,
+        #127551 71%,
+        #2b8d58 100%
+      );
       position: relative;
 
       @media (max-width: var.$md) {
@@ -29,12 +91,12 @@
         width: 300px;
       }
       .threeBlockItemTitle {
-        font-size: 20px;
+        font-size: 23px;
         font-weight: bold;
       }
 
       .threeBlockItemDescription {
-        font-size: 14px;
+        font-size: 18px;
         margin: 1rem 0;
       }
 
@@ -45,6 +107,36 @@
         width: 100px;
         height: 100px;
       }
+    }
+  }
+
+  .mainCallBtn {
+    &:active {
+      background-image: linear-gradient(
+        to right,
+        #02b050c7 0%,
+        #2b8d78 71%,
+        #10c263 100%
+      );
+    }
+
+    cursor: pointer;
+    background: rgb(20,143,43);
+    padding: 20px 25px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    &:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+      scale: 1.05;
     }
   }
 }

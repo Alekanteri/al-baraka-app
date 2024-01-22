@@ -2,12 +2,9 @@ import React from "react";
 import { workExp } from "../../utils/data";
 import css from "./Work.module.scss";
 import { motion } from "framer-motion";
-import {
-  fadeIn,
-  staggerChildren,
-  textVariant2,
-  zoomIn,
-} from "../../utils/motion";
+import { draw, fadeIn, slideIn, staggerChildren, textVariant2, zoomIn } from "../../utils/motion";
+
+
 const Work = () => {
   return (
     <motion.section
@@ -20,9 +17,8 @@ const Work = () => {
       <a className="anchor" id="work"></a>
 
       <div className={`innerWidth flexCenter ${css.container}`}>
-        {/* heading */}
         <span className="primaryText yPaddings">
-          Почему более 40 000 клиентов выбрали нас
+          Почему более 70 000 клиентов выбрали нас
         </span>
 
         <div className={`flexCenter ${css.experiences}`}>

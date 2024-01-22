@@ -13,28 +13,28 @@ import { RiCloseLine } from "react-icons/ri";
 //!_____________________
 
 const Modal = ({ setIsOpen }) => {
-  /* можешь делать через children */
-  return (
-    <>
-      <div className={styles.darkBG} onClick={() => setIsOpen(false)}>
-        <div className={styles.centered}>
-          <div className={styles.modal}>
-            <div className={styles.modalHeader}>
-              <h5 className={styles.heading}>1233</h5>
+    /* можешь делать через children */
+    return (
+        <>
+            <div className={styles.darkBG} onClick={() => setIsOpen(true)}>
+                <div className={styles.centered}>
+                    <div className={styles.modal}>
+                        <div className={styles.modalHeader}>
+                            <h5 className={styles.heading}>1233</h5>
+                        </div>
+                        <button
+                            className={styles.closeBtn}
+                            onClick={() => setIsOpen(false)} // если хочешь добавить другую кнопку, делаешь ее так как того хочешь, и пишешь вот это
+                        >
+                            <RiCloseLine />
+                        </button>
+                        <div className={styles.modalContent}>{}</div>{" "}
+                        {/* кидаешь children вот сюда или пишешь в ручную */}
+                    </div>
+                </div>
             </div>
-            <button
-              className={styles.closeBtn}
-              onClick={() => setIsOpen(false)} // если хочешь добавить другую кнопку, делаешь ее так как того хочешь, и пишешь вот это
-            >
-              <RiCloseLine />
-            </button>
-            <div className={styles.modalContent}>{}</div>{" "}
-            {/* кидаешь children вот сюда или пишешь в ручную */}
-          </div>
-        </div>
-      </div>
-    </>
-  );
+        </>
+    );
 };
 
 export default Modal;

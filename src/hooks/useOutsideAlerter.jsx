@@ -1,19 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function useOutsideAlerter({ menuRef, setMenuOpened }) {
+export default function useOutsideAlerter({menuRef, setMenuOpened}) {
   const viewport_width = document.documentElement.clientWidth;
   useEffect(() => {
+
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         if (viewport_width <= 640) {
-          setMenuOpened(false);
+            setMenuOpened(false);
         }
       }
     }
+    const state = {
+      name: 'string'
+    }
+    console.log(state)
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
+
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuRef]);
+
 }

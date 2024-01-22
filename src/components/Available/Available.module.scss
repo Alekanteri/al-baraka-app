@@ -1,17 +1,14 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  background: $bg-main-color;
-
-  @include darkMode {
-    background: $dark-bg-main-color;
-  }
+  background: white;
   overflow: hidden;
   .container {
     flex-direction: column;
     gap: 2rem;
     .heading {
       width: 100%;
+      justify-content: space-between;
       align-items: flex-end;
       flex-wrap: wrap;
       > :nth-child(2) {
@@ -23,19 +20,9 @@
 
     .showCase {
       width: 100%;
-      display: grid;
-      place-items: center;
-      gap: 1rem;
-      grid-template-columns: repeat(3, 1fr);
-
-      @media (max-width: 990px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
-
+      gap: 1.5rem;
+      justify-content: space-around;
+      flex-wrap: wrap;
       > img {
         border-radius: 20px;
         max-width: 25rem;
@@ -43,6 +30,89 @@
         box-shadow: 0px 21px 13px rgba(0, 0, 0, 13%);
         cursor: pointer;
       }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+  
+        figure {
+          margin: 30px;
+          border-radius: 20px;
+          padding: 10px 30px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          transition: 0.3s;
+          &:hover {
+            box-shadow: 0 4px 30px rgba(8, 182, 88, 0.37);
+          }
+          padding-bottom: 20px;
+  
+          figcaption {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            b {
+              font-size: 22px;
+      
+            }
+  
+            .price {
+              margin-top: 10px;
+              font-size: 20px;
+            }
+          }
+  
+          .mainCallBtn {
+            @media (max-width: $sm) {
+              position: relative;
+            }
+            
+  
+            &:active {
+              background-image: linear-gradient(
+                to right,
+                #02b050c7 0%,
+                #2b8d78 71%,
+                #10c263 100%
+              );
+            }
+            cursor: pointer;
+            background: rgb(20,143,43);
+            font-weight: 600;
+            margin: 10px;
+            padding: 20px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            border-radius: 10px;
+            display: block;
+            margin-left: 25px;
+            margin: auto;
+            border: none;
+            &:hover {
+              background-position: right center;
+              color: #fff;
+              text-decoration: none;
+              scale: 1.05;
+            }
+            margin-top: 10px;
+          }
+        }
+  
+        @media (max-width: 990px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+  
+        @media (max-width: 700px) {
+          grid-template-columns: 1fr;
+        }
+  
+        img {
+          display: flex;
+          margin: auto;
+        }
+    
+      
     }
   }
 
@@ -66,36 +136,37 @@
   }
 
   .howContent {
-    margin: 3rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
 
-    .howItem {
-      position: relative;
-      border-radius: 1rem;
-      padding: 1rem;
-      background: $main-block-bg-color;
-      box-shadow: 0 0 20px $bg-main-color;
-      overflow: hidden;
-      height: 8rem;
+    .howLeft {
       display: flex;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        width: 100px;
-        height: 100px;
-        bottom: 0px;
-        right: -20px;
+      background-image: url("https://www.al-baraka.ru/assets/img/2.svg");
+      span {
+        z-index: 1;
       }
-
-      @include darkMode {
-        box-shadow: 0 0 20px $dark-bg-secondary-color;
+      .howItem {
+        height: 108px;
       }
+    }
+    .howItem {
+      background: linear-gradient(
+        to right,
+        #127551 0%,
+        #127551 71%,
+        #2b8d58 100%
+      );
+      margin: 10px;
+      padding: 30px;
+      font-size: 1rem;
+      width: 500px;
+      text-align: center;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
     }
   }
 }

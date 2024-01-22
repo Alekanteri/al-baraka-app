@@ -1,10 +1,6 @@
-@import "./contants.scss";
-.container {
-  overflow-x: clip;
-  position: relative;
-  color: $text-primary;
-
-  @include darkMode {
-    color: $dark-text-primary;
-  }
+@import './contants.scss';
+.container{
+    overflow-x: clip;
+    position: relative;
+    color: $primary;
 }

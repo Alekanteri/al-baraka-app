@@ -1,11 +1,7 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  background: $bg-main-color;
-
-  @include darkMode {
-    background: $dark-bg-main-color;
-  }
+  background: white;
 
   .container {
     align-items: flex-start;
@@ -23,7 +19,8 @@
       .exp {
         display: flex;
         align-items: center;
-        border: 1px solid $border-color;
+
+        border: 1px solid $secondary-white;
         border-radius: 20px;
         padding: 1.5rem;
         gap: 2rem;
@@ -34,7 +31,6 @@
           box-shadow: 0px 21px 13px rgba(0, 0, 0, 0.04);
         }
 
-        //icon circles
         > :nth-child(1) {
           padding: 10px;
           width: 3rem;
@@ -42,7 +38,6 @@
           border-radius: 999px;
         }
 
-        //description
         > :nth-child(2) {
           display: flex;
           flex-direction: column;
@@ -57,12 +52,115 @@
     }
 
     .rightSide {
+      
       @media (max-width: $sm) {
         text-align: center;
       }
+      width: 100%;
+      padding: 30px;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      h1 {
+        text-align: center;
+        font-size: 1.7rem;
+      }
+
+      .formContact {
+        padding: 10px;
+        border-radius: 1000px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        width: fit-content;
+        margin: auto;
+        display: flex;
+
+        li {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 10px;
+          cursor: pointer;
+          width: 150px;
+
+          border-radius: 1000px;
+        }
+        .active {
+          background: #167852;
+          color: white;
+          transition: 0.3s;
+        }
+
+        button {
+          background: #167852;
+          border: none;
+          color: white;
+          font-size: 16px;
+        }
+      }
+
+      .consultFormContent {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        input {
+          width: 450px;
+          height: 60px;
+          margin: 10px;
+          border: 1px solid #2b8d58;
+          border-radius: 10px;
+          padding: 20px;
+          outline: none;
+        }
+
+        ::placeholder {
+          font-size: 15px;
+        }
+
+        .submitBtn {
+          @media (max-width: $sm) {
+            position: relative;
+          }
+          &:active {
+            background-image: linear-gradient(
+              to right,
+              #02b050c7 0%,
+              #2b8d78 71%,
+              #10c263 100%
+            );
+          }
+          cursor: pointer;
+          background: rgb(20, 143, 43);
+          font-weight: 600;
+          margin: 10px;
+          padding: 20px 45px;
+          text-align: center;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+          box-shadow: 0 0 20px #eee;
+          border-radius: 10px;
+          display: block;
+          border: none;
+          &:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+            scale: 1.05;
+          }
+        }
+      }
+
+      span {
+        text-align: center;
+        margin-top: -1.2rem;
+        font-size: 20px;
+      }
 
       .stats {
         justify-content: flex-start;

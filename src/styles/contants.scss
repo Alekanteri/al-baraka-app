@@ -1,8 +1,11 @@
-$sm: 640px;
-$md: 768px;
-$lg: 1024px;
+$sm :640px;
+$md : 768px;
+$lg : 1024px;
 $xl: 1280px;
 $xxl: 1536px;
+$primary: #0D2F3F;
+$secondary: #286F6C;
+$secondary-white: #E7E7E7;
 
 $telegram-border-color: #0088cc;
 
@@ -20,21 +23,3 @@ $main-block-bg-color: linear-gradient(
 $bg-main-color: #ffffff;
 $bg-secondary-color: #f8f7f1;
 
-//!_______dark mode_________!//
-
-$dark-text-primary: #dddddd;
-
-$dark-border-color: #202020;
-
-$dark-bg-main-color: #282828;
-$dark-bg-secondary-color: #1d1d1d;
-
-$darkMode: true;
-
-@mixin darkMode {
-  @if ($darkMode) {
-    @media (prefers-color-scheme: dark) {
-      @content;
-    }
-  }
-}

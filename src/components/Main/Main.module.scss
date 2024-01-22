@@ -2,7 +2,6 @@
 
 .wrapper {
   overflow: hidden;
-  height: 100%;
 
   .container {
     position: relative;
@@ -86,7 +85,7 @@
         gap: 2rem;
         justify-content: center;
       }
-      margin-top: 15rem;
+      margin-top: 12rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -126,11 +125,12 @@
         }
       }
       position: absolute;
+      bottom: -3rem;
       margin: auto;
-      background-image: url("../splash.png");
+      background-image: url("../../../public/splash.png");
       background-repeat: no-repeat;
       background-size: 14rem;
-      left: 60%;
+      left: 43%;
 
       img {
         @media (max-width: $sm) {
@@ -141,36 +141,40 @@
     }
 
     .mainCallBtn {
-      @media (max-width: $md) {
-        margin: 1rem auto;
+      @media (max-width: $sm) {
+        position: relative;
+        display: none;
+      }
+      position: absolute;
+      top: 50%;
+      left: 0;
+      &:active {
+        background-image: linear-gradient(
+          to right,
+          #02b050c7 0%,
+          #2b8d78 71%,
+          #10c263 100%
+        );
       }
       cursor: pointer;
-      background-image: linear-gradient(
-        to right,
-        #02aab0 0%,
-        #2b8d58 71%,
-        #2b8d58 100%
-      );
-      margin: 5rem 0;
-      padding: 20px 45px;
+      background: rgb(20,143,43);
+      margin: 10px;
+      padding: 25px 45px;
       text-align: center;
+      outline: none;
       text-transform: uppercase;
       transition: 0.5s;
       background-size: 200% auto;
       color: white;
-      box-shadow: 0 0 20px $bg-main-color;
+      font-weight: 600;
       border-radius: 10px;
       display: block;
       border: none;
       &:hover {
-        background-position: right center;
+        background-position: right center; /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
         scale: 1.05;
-      }
-
-      @include darkMode {
-        box-shadow: 0 0 20px $dark-bg-secondary-color;
       }
     }
   }

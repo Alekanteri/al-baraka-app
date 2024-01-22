@@ -2,6 +2,8 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Main.module.scss";
 import { motion } from "framer-motion";
+import { FaRegFilePdf } from "react-icons/fa6";
+
 
 const Main = () => {
   return (
@@ -60,6 +62,15 @@ const Main = () => {
                 ЛЕТ НАМ ДОВЕРЯЮТ БОЛЕЕ <br /> 40 000 ДОВОЛЬНЫХ КЛИЕНТОВ
               </div>
             </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn("left", "tween", 0.5, 1)}
+            className={css.certificate}
+          >
+            <FaRegFilePdf style={{marginBottom: '20px'}} size={70}/>
+            <span style={{fontSize: '12px'}}>ОСТАВЬТЕ ЗАЯВКУ И ПОЛУЧИТЕ СРАЗУ PDF-ФАЙЛ </span>
+            <span style={{fontSize: '12px'}}> СО СПИСКОМ ВСЕХ НАШИХ ПАРТНЕРОВ</span>
           </motion.div>
         </div>
       </motion.div>

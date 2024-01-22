@@ -1,7 +1,7 @@
 import styles from "./ThreeBlock.module.scss";
-import icon1 from "../../assets/svg/1.svg";
-import icon2 from "../../assets/svg/2.svg";
-import icon3 from "../../assets/svg/3.svg";
+import icon1 from "../../assets/img/11.svg";
+import icon2 from "../../assets/img/12.svg";
+import icon3 from "../../assets/img/2.svg";
 
 const ThreeBlock = () => {
   return (
@@ -16,6 +16,7 @@ const ThreeBlock = () => {
             Займет не более 2-х минут
           </p>
           <img src={icon1} alt="" />
+          <button className={styles.mainCallBtn}>Заполнить анкету</button>
         </div>
         <div className={styles.ThreeBlockItem}>
           <span className={styles.threeBlockItemTitle}>

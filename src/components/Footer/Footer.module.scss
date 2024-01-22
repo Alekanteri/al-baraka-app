@@ -1,12 +1,7 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  background: $bg-main-color;
-
-  @include darkMode {
-    background: $dark-bg-main-color;
-  }
-
+  background: white;
   .container {
     gap: 2rem;
     @media (max-width: $sm) {
@@ -54,7 +49,7 @@
         li {
           cursor: pointer;
           &:hover {
-            color: $text-secondary;
+            color: $secondary;
           }
         }
       }
