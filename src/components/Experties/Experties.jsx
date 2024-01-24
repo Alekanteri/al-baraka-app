@@ -3,6 +3,8 @@ import { projectExperience, WhatDoIHelp } from "../../utils/data";
 import css from "./Experties.module.scss";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, textVariant } from "../../utils/motion.js";
+import Contact from "../Contact/Contact.jsx";
+
 const Experties = () => {
   return (
     <section className={css.wrapper}>
@@ -14,7 +16,6 @@ const Experties = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`paddings yPaddings innerWidth flexCenter ${css.container}`}
       >
-        {/* left side */}
         <div className={css.leftSide}>
           {projectExperience.map((exp, i) => {
             return (
@@ -28,33 +29,13 @@ const Experties = () => {
                 </div>
                 <div>
                   <span>{exp.name}</span>
-                  <span className="secondaryText">{exp.projects} Projects</span>
+                  <span className="secondaryText">{exp.projects}</span>
                 </div>
               </motion.div>
             );
           })}
         </div>
-
-        {/* right */}
-        <motion.div variants={textVariant(0.5)} className={css.rightSide}>
-          <span className="primaryText">What do I help? </span>
-          {WhatDoIHelp.map((paragraph, i) => (
-            <span className="secondaryText" key={i}>
-              {paragraph}
-            </span>
-          ))}
-
-          <div className={`flexCenter ${css.stats}`}>
-            <div className={`flexCenter ${css.stat}`}>
-              <span className="primaryText">285+</span>
-              <span className="secondaryText">Project Completed</span>
-            </div>
-            <div className={`flexCenter ${css.stat}`}>
-              <span className="primaryText">190+</span>
-              <span className="secondaryText">Happy Clients</span>
-            </div>
-          </div>
-        </motion.div>
+        <Contact />
       </motion.div>
     </section>
   );

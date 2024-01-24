@@ -10,10 +10,6 @@
 
 .bg-primary {
   background: $bg-secondary-color;
-
-  @include darkMode {
-    background: $dark-bg-secondary-color;
-  }
 }
 
 .innerWidth {

@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
 
-    @media (max-height: 768px) {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 3rem;
       place-items: center;

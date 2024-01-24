@@ -3,8 +3,4 @@
   overflow-x: clip;
   position: relative;
   color: $text-primary;
-
-  @include darkMode {
-    color: $dark-text-primary;
-  }
 }

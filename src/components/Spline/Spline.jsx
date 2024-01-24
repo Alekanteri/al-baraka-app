@@ -3,7 +3,7 @@ import css from "./Spline.module.scss";
 import "../../styles/global.scss";
 
 export default function SplineApp() {
-  const [width, setWidth] = useState(window.innerWidth / 2.5);
+  const [width, setWidth] = useState(window.innerWidth / 2);
 
   window.onresize = () => {
     setWidth(window.innerWidth / 2.5);

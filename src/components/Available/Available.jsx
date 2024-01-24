@@ -1,23 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import css from "./Available.module.scss";
-import { fadeIn, staggerChildren, textVariant } from "../../utils/motion";
-import time from "../../assets/img/time.svg";
+import { fadeIn, textVariant } from "../../utils/motion";
+import Phone1 from "../../assets/img/phone/1.jpg";
+import Phone2 from "../../assets/img/phone/2.jpg";
+import Phone3 from "../../assets/img/phone/3.webp";
+import Phone4 from "../../assets/img/phone/4.jpg";
+import Phone5 from "../../assets/img/phone/5.avif";
+import Modal from "../Modal/Modal";
 
-import logo1 from "../../assets/svg/how/1.svg";
-import logo2 from "../../assets/svg/how/2.svg";
-import logo3 from "../../assets/svg/how/3.svg";
-import logo4 from "../../assets/svg/how/4.svg";
+const Available = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
 
-const Portfolio = () => {
   return (
-    <motion.section
-      variants={staggerChildren}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}
-    >
+    <section className={`paddings ${css.wrapper}`}>
       <a className="anchor" id="portfolio"></a>
 
       <div className={`innerWidth flexCenter ${css.container}`}>
@@ -25,82 +21,125 @@ const Portfolio = () => {
           variants={textVariant(0.4)}
           className={`flexCenter ${css.heading}`}
         >
-          <div style={{ textAlign: "center" }}>
+          <div>
             <span style={{ fontSize: "35px" }} className="primaryText">
-              Товары, доступные для покупки в рассрочку
+              Популярные товары, которые берут в рассрочку
             </span>
           </div>
         </motion.div>
 
-        <div className={`${css.showCase}`}>
-          <motion.img
-            variants={fadeIn("up", "tween", 0.5, 0.6)}
-            src="./7.png"
-            alt="project"
-          />
-          <motion.img
-            variants={fadeIn("up", "tween", 0.7, 0.6)}
-            src="./8.png"
-            alt="project"
-          />
-          <motion.img
-            variants={fadeIn("up", "tween", 0.9, 0.6)}
-            src="./9.png"
-            alt="project"
-          />
-          <motion.img
-            variants={fadeIn("up", "tween", 0.5, 0.6)}
-            src="./10.png"
-            alt="project"
-          />
-          <motion.img
-            variants={fadeIn("up", "tween", 0.7, 0.6)}
-            src="./11.png"
-            alt="project"
-          />
-          <motion.img
-            variants={fadeIn("up", "tween", 0.9, 0.6)}
-            src="./12.png"
-            alt="project"
-          />
-        </div>
-        <div className={css.availableFast}>
-          <img src={time} alt="time" />
-          <div className={css.availableFastText}>
-            Примерное время рассмотрения заявки на рассрочку для новых клиентов
-            <span style={{ fontWeight: "bold" }}> - 45 минут</span>
-          </div>
-          <h1>Узнайте, как мы работаем</h1>
-          <div className={css.howContent}>
-            <div className={css.howItem}>
-              <p>Наша деятельность основана на исламском контракте Мурабаха</p>
-              <img src={logo1} alt="" />
-            </div>
-            <div className={css.howItem}>
-              <p>
-                Штрафы, пени, сборы, страховки и скрытые платежи - отсутствуют
-              </p>
-              <img src={logo2} alt="" />
-            </div>
-            <div className={css.howItem}>
-              <p>
-                Мы выкупаем необходимый Вам товар в магазине-партнере и
-                перепродаем в рассрочку с фиксированной наценкой
-              </p>
-              <img src={logo3} alt="" />
-            </div>
-            <div className={css.howItem}>
-              <p>
-                На всех тарифах действует фиксированный размер наценкb на весь
-                период рассрочки
-              </p>
-              <img src={logo4} alt="" />
-            </div>
-          </div>
+        <div className={`flexGrid ${css.showContainer}`}>
+          <motion.figure variants={fadeIn("up", "tween", 0.5, 0.6)}>
+            <img width={200} src={Phone1} alt="project" />
+            <figcaption>
+              <b>APPLE IPHONE 14 PRO 128GB</b> <br />
+              <p className={css.price}>96 990 ₽</p>
+              <button
+                variants={fadeIn("up", "tween", 0.4, 1)}
+                className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Оформить рассрочку
+              </button>
+            </figcaption>
+          </motion.figure>
+
+          <motion.figure variants={fadeIn("up", "tween", 0.5, 0.6)}>
+            <img width={200} src={Phone2} alt="project" />
+            <figcaption>
+              <b>APPLE IPHONE 14 PRO MAX 128GB</b> <br />
+              <p className={css.price}>106 990 ₽</p>
+              <button
+                variants={fadeIn("up", "tween", 0.4, 1)}
+                className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Оформить рассрочку
+              </button>
+            </figcaption>
+          </motion.figure>
+
+          <motion.figure variants={fadeIn("up", "tween", 0.5, 0.6)}>
+            <img
+              width={250}
+              style={{ marginTop: "6px" }}
+              src={Phone3}
+              alt="project"
+            />
+            <figcaption>
+              <b>SAMSUNG GALAXY S23 ULTRA 12/256</b> <br />
+              <p className={css.price}>90 990 ₽</p>
+              <button
+                variants={fadeIn("up", "tween", 0.4, 1)}
+                className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Оформить рассрочку
+              </button>
+            </figcaption>
+          </motion.figure>
+
+          <motion.figure variants={fadeIn("up", "tween", 0.5, 0.6)}>
+            <img width={200} height={250} src={Phone4} alt="project" />
+            <figcaption>
+              <b>XIAOMI REDMI NOTE 12 PRO 8/256</b> <br />
+              <p className={css.price}>23 990 ₽</p>
+              <button
+                variants={fadeIn("up", "tween", 0.4, 1)}
+                className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Оформить рассрочку
+              </button>
+            </figcaption>
+          </motion.figure>
+
+          <motion.figure variants={fadeIn("up", "tween", 0.5, 0.6)}>
+            <img width={250} src={Phone5} alt="project" />
+            <figcaption>
+              <b>APPLE MACBOOK AIR 2022 M2 8/256</b> <br />
+              <p className={css.price}>114 990 ₽</p>
+              <button
+                variants={fadeIn("up", "tween", 0.4, 1)}
+                className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Оформить рассрочку
+              </button>
+            </figcaption>
+          </motion.figure>
+
+          <motion.figure variants={fadeIn("up", "tween", 0.5, 0.6)}>
+            <img width={250} src={Phone5} alt="project" />
+            <figcaption>
+              <b>APPLE MACBOOK PRO 2022 M2 8/512</b> <br />
+              <p className={css.price}>143 990 ₽</p>
+              <button
+                variants={fadeIn("up", "tween", 0.4, 1)}
+                className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Оформить рассрочку
+              </button>
+            </figcaption>
+          </motion.figure>
         </div>
       </div>
-    </motion.section>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
+    </section>
   );
 };
 
-export default Portfolio;
+export default Available;

@@ -23,7 +23,7 @@
       border-radius: 1rem;
       background: var.$main-block-bg-color;
       position: relative;
-
+      color: var.$text-white;
       @media (max-width: var.$md) {
         margin: 0 auto;
         width: 300px;
@@ -36,6 +36,15 @@
       .threeBlockItemDescription {
         font-size: 14px;
         margin: 1rem 0;
+      }
+
+      button {
+        background: var.$telegram-border-color;
+        color: var.$text-white;
+        border: none;
+        border-radius: 1rem;
+        padding: 1rem;
+        cursor: pointer;
       }
 
       img {

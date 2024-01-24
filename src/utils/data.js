@@ -54,87 +54,124 @@ export const workExp = [
     tenure: "Aug 2014 - Sep 2016",
     role: "Человеческое отношение к клиентам",
     detail:
-        "Наши клиенты - это наши друзья. К каждому мы относимся с уважением и вниманием. Стараемся максимально помочь при получении рассрочки и желаемого товара",
+      "Наши клиенты - это наши друзья. К каждому мы относимся с уважением и вниманием. Стараемся максимально помочь при получении рассрочки и желаемого товара",
   },
 ];
 
-export const comments = [
+export const partners = [
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+    img: "../partners/1.png",
+    title: "ИНГСТРОЙ Назрань",
+    data: {
+      industry: "Стройматериалы",
+      tel: "8(964)028-78-88",
+      time: "9:00 – 18:00",
+      location: "г. Назрань, Муталиева 199",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
+    img: "../partners/1.png",
+    title: "ИНГСТРОЙ Плиево",
+    data: {
+      industry: "Стройматериалы",
+      tel: "8(938)005-55-35",
+      time: "9:00 – 18:00",
+      location: "Плиево, пересечение улиц Осканова и Эсмурзиева",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+    img: "../partners/1.png",
+    title: "ИНГСТРОЙ Малгобек",
+    data: {
+      industry: "Стройматериалы",
+      tel: "8(929) 860-74-44",
+      time: "9:00 – 18:00",
+      location: "с. Сагопши, ул. Толстого 34",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
+    img: "../partners/3.png",
+    title: "Ламинат Холл Назрань",
+    data: {
+      industry: "Ламинат",
+      tel: "+7 (963) 399-17-77",
+      inst: "laminat_hall",
+      time: "9:30 – 18:30",
+      location: "Назрань, ул. Картоева, 148",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+    img: "../partners/3.png",
+    title: "Ламинат Холл Экажево",
+    data: {
+      industry: "Ламинат",
+      tel: "8(938) 007-77-677",
+      inst: "laminat_hall",
+      time: "9:30 – 18:30",
+      location: "Экажево, ул. М.С. Экажева 3",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
+    img: "../partners/4.png",
+    title: "Моби Кинг Назрань",
+    data: {
+      industry: "Магазин электроники",
+      tel: "+7 (962) 637-80-87",
+      inst: "mobi_king.ru",
+      time: "9:00 - 18:00",
+      location: "г. Назрань, ул. Муталиева, 34",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+    img: "../partners/4.png",
+    title: "Моби Кинг Сунжа",
+    data: {
+      industry: "Магазин электроники",
+      tel: "+7 (928) 439-87-771",
+      inst: "mobi_king.ru",
+      time: "9:00 - 18:00",
+      location: "г. Сунжа, ТД Сийг, маг. 108",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people1.png",
+    img: "../partners/5.png",
+    title: "Моби Кинг Сунжа",
+    data: {
+      industry: "Центр Мебели и Дизайна",
+      tel: "+7 (960) 435-22-55",
+      inst: "cmd_06",
+      time: "9:00 - 18:00",
+      location: "Г.Назрань ул.Тангиева 10",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-      "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+    img: "../partners/2.jpeg",
+    title: "ИНГАВТО",
+    data: {
+      industry: "Автозапчасти на все авто",
+      tel: "+7 938) 026-66-44",
+      inst: "ingavto06",
+      time: "9:00 - 18:00",
+      location: "г. Назрань, ул. Вазовская, 1",
+    },
   },
   {
-    name: "Anamika Sandula",
-    post: "Creative Manager",
-    comment:
-        "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    img: "./people2.png",
+    img: "../partners/6.jpg",
+    title: "Обои Новострой",
+    data: {
+      industry: "Автозапчасти на все авто",
+      tel: "+7 (938) 076-88-33",
+      inst: "oboi.novostroi",
+      time: "9:00 - 18:00",
+      location: "АО Насыр-Корт, ул. А. Тутаевой, 24",
+    },
   },
-
 ];
 
 export const sliderSettings = {
-  dots: true,
-  infinite: false,
+  autoplay: true,
+  infinite: true,
+  autoplaySpeed: 3000,
   speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -146,22 +183,13 @@ export const sliderSettings = {
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
         initialSlide: 2,
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 800,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

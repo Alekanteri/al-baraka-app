@@ -3,10 +3,6 @@
 .wrapper {
   background: $bg-main-color;
 
-  @include darkMode {
-    background: $dark-bg-main-color;
-  }
-
   overflow: hidden;
   .container {
     flex-direction: column;

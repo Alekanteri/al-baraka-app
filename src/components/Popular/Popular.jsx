@@ -1,12 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import css from "./Popular.module.scss";
-import {
-  fadeIn,
-  staggerChildren,
-  textVariant,
-  textVariant2,
-} from "../../utils/motion";
+import { fadeIn, textVariant } from "../../utils/motion";
+import Modal from "../Modal/Modal";
 import Phone1 from "../../assets/img/phone/1.jpg";
 import Phone2 from "../../assets/img/phone/2.jpg";
 import Phone3 from "../../assets/img/phone/3.webp";
@@ -14,6 +10,8 @@ import Phone4 from "../../assets/img/phone/4.jpg";
 import Phone5 from "../../assets/img/phone/5.avif";
 
 const Popular = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <section className={`paddings ${css.wrapper}`}>
       <a className="anchor" id="portfolio"></a>
@@ -39,6 +37,9 @@ const Popular = () => {
               <button
                 variants={fadeIn("up", "tween", 0.4, 1)}
                 className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Оформить рассрочку
               </button>
@@ -53,6 +54,9 @@ const Popular = () => {
               <button
                 variants={fadeIn("up", "tween", 0.4, 1)}
                 className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Оформить рассрочку
               </button>
@@ -72,6 +76,9 @@ const Popular = () => {
               <button
                 variants={fadeIn("up", "tween", 0.4, 1)}
                 className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Оформить рассрочку
               </button>
@@ -86,6 +93,9 @@ const Popular = () => {
               <button
                 variants={fadeIn("up", "tween", 0.4, 1)}
                 className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Оформить рассрочку
               </button>
@@ -100,6 +110,9 @@ const Popular = () => {
               <button
                 variants={fadeIn("up", "tween", 0.4, 1)}
                 className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Оформить рассрочку
               </button>
@@ -114,6 +127,9 @@ const Popular = () => {
               <button
                 variants={fadeIn("up", "tween", 0.4, 1)}
                 className={css.mainCallBtn}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
               >
                 Оформить рассрочку
               </button>
@@ -121,6 +137,7 @@ const Popular = () => {
           </motion.figure>
         </div>
       </div>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </section>
   );
 };

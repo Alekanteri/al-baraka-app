@@ -15,30 +15,13 @@
     transform: translate(-50%, -50%);
 
     .modal {
-      width: 250px; // тут я оставил размер такой, просто чтобы протестировать, поменяешь так как тебе надо
-      height: 250px;
+      width: fit-content;
+      height: fit-content;
       background: white;
       color: white;
       z-index: 10;
       border-radius: 1rem;
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-
-      .modalHeader {
-        height: 50px;
-        background: white;
-        overflow: hidden;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-
-        .heading {
-          margin: 0;
-          padding: 10px;
-          color: #2c3e50;
-          font-weight: 500;
-          font-size: 18px;
-          text-align: center;
-        }
-      }
 
       .modalContent {
         padding: 10px;

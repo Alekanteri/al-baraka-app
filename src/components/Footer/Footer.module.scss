@@ -3,10 +3,6 @@
 .wrapper {
   background: $bg-main-color;
 
-  @include darkMode {
-    background: $dark-bg-main-color;
-  }
-
   .container {
     gap: 2rem;
     @media (max-width: $sm) {

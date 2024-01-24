@@ -3,16 +3,16 @@ import Experties from "./components/Experties/Experties";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main.jsx";
-import People from "./components/People/People";
-import Portfolio from "./components/Portfolio/Portfolio";
 import Work from "./components/Work/Work";
 import css from "./styles/App.module.scss";
 import Calculator from "./components/Calculator/Calculator.jsx";
 import GoogleMap from "./components/GoogleMap/GoogleMap.jsx";
-import Reviews from "./components/Reviews/Reviews.jsx";
 import Available from "./components/Available/Available.jsx";
 import Spline from "./components/Spline/Spline.jsx";
 import ThreeBlock from "./components/ThreeBlock/ThreeBlock.jsx";
+import Partners from "./components/Partners/Partners.jsx";
+import Popular from "./components/Popular/Popular.jsx";
+import HowWork from "./components/HowWork/HowWork.jsx";
 
 const App = () => {
   return (
@@ -21,13 +21,13 @@ const App = () => {
       <Main />
       <ThreeBlock />
       <Experties />
-      <Portfolio />
+      <Popular />
       <Calculator />
       <Available />
+      <HowWork />
       <Work />
-      <People />
+      <Partners />
       <Spline />
-      <Reviews />
       <GoogleMap />
       <Footer />
     </div>

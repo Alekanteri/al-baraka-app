@@ -4,6 +4,7 @@ import css from "./Partners.module.scss";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { footerVariants, staggerChildren } from "../../utils/motion";
+
 const Partners = () => {
   return (
     <motion.section

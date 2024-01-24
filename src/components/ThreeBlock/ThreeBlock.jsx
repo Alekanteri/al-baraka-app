@@ -2,8 +2,11 @@ import styles from "./ThreeBlock.module.scss";
 import icon1 from "../../assets/svg/1.svg";
 import icon2 from "../../assets/svg/2.svg";
 import icon3 from "../../assets/svg/3.svg";
+import Modal from "../Modal/Modal";
+import React from "react";
 
 const ThreeBlock = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <section className={styles.threeBlockContainer}>
       <h1>3 простых шага к получению желаемого товара</h1>
@@ -15,6 +18,13 @@ const ThreeBlock = () => {
           <p className={styles.threeBlockItemDescription}>
             Займет не более 2-х минут
           </p>
+          <button
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          >
+            Заполните анкету
+          </button>
           <img src={icon1} alt="" />
         </div>
         <div className={styles.ThreeBlockItem}>
@@ -36,6 +46,7 @@ const ThreeBlock = () => {
           <img src={icon3} alt="" />
         </div>
       </div>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </section>
   );
 };

@@ -2,8 +2,10 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Main.module.scss";
 import { motion } from "framer-motion";
+import Modal from "../Modal/Modal";
 
 const Main = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <section className={`paddings ${css.wrapper}`}>
       <motion.div
@@ -45,6 +47,9 @@ const Main = () => {
         <motion.button
           variants={fadeIn("up", "tween", 0.4, 1)}
           className={css.mainCallBtn}
+          onClick={() => {
+            setIsOpen(true);
+          }}
         >
           Получить список партнеров
         </motion.button>
@@ -63,6 +68,7 @@ const Main = () => {
           </motion.div>
         </div>
       </motion.div>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </section>
   );
 };
