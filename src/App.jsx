@@ -13,6 +13,7 @@ import ThreeBlock from "./components/ThreeBlock/ThreeBlock.jsx";
 import Partners from "./components/Partners/Partners.jsx";
 import Popular from "./components/Popular/Popular.jsx";
 import HowWork from "./components/HowWork/HowWork.jsx";
+import FAQ from "./components/FAQ/FAQ.jsx";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
       <Work />
       <Partners />
       <Spline />
+      <FAQ />
       <GoogleMap />
       <Footer />
     </div>

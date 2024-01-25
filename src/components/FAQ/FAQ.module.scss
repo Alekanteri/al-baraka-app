@@ -1,0 +1,65 @@
+@use "../../styles/contants.scss" as var;
+
+.faqContainer {
+  max-width: 1280px;
+  display: grid;
+  place-items: center;
+  margin: 5rem auto;
+
+  .faqTitle {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .faqItemsBody {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    details {
+      width: 100%;
+      background: var.$bg-main-color;
+      border: 1px solid var.$border-color;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      transition: max-height 400ms ease-out;
+
+      summary {
+        list-style: url("../../assets/svg/Plus\ icon.svg");
+        list-style-position: inside;
+        font-size: 20px;
+        cursor: pointer;
+        margin-bottom: -10px; /* for more prominent move */
+        transition: all 250ms ease-out;
+
+        @media (max-width: 600px) {
+          font-size: 16px;
+        }
+      }
+
+      &[open] > summary {
+        list-style: url("../../assets/svg/Close\ icon.svg") !important;
+        list-style-position: inside !important;
+        margin-bottom: 10px;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var.$text-secondary;
+      }
+
+      @media (max-width: 600px) {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      width: 80%;
+    }
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+}
